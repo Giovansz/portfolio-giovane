@@ -1,0 +1,86 @@
+* { margin: 0; padding: 0; box-sizing: border-box; }
+    body { font-family: Arial, sans-serif; background: #02031a; color: #fff; }
+
+    /* Header fixo */
+    header {
+      position: fixed;
+      top: 0; left: 0; width: 100%;
+      background: #0a66c2;
+      color: white; padding: 1rem 2rem;
+      display: flex; justify-content: space-between; align-items: center;
+      z-index: 1000;
+    }
+    header a {
+      color: white; text-decoration: none; margin-left: 1.5rem;
+      font-weight: bold; transition: opacity 0.3s;
+    }
+    header a:hover { opacity: 0.7; }
+
+    /* Container principal */
+    main {
+      padding: 7rem 2rem 3rem;
+      max-width: 1100px;
+      margin: auto;
+    }
+    h1 {
+      text-align: center;
+      margin-bottom: 2rem;
+      color: #fff;
+    }
+
+    /* Grid de projetos */
+    .projects-grid {
+      display: flex;
+      flex-direction: column;
+      gap: 2rem;
+    }
+
+    /* Card de projeto */
+    .project-card {
+      background: rgb(44, 44, 44);
+      border-radius: 12px;
+      display: flex;
+      flex-wrap: wrap;
+      padding: 1.5rem;
+      gap: 1rem;
+      align-items: center;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.5);
+    }
+
+    /* Texto (lado esquerdo) */
+    .project-text {
+      flex: 1 1 300px;
+    }
+    .project-text h2 {
+      margin-bottom: 0.5rem;
+      color: #0a66c2;
+    }
+    .project-text p {
+      font-size: 0.9rem;
+      color: #ccc;
+      margin-bottom: 1rem;
+    }
+    .project-text a {
+      display: inline-block;
+      padding: 0.5rem 1rem;
+      background: #0a66c2;
+      color: white;
+      text-decoration: none;
+      border-radius: 5px;
+      font-size: 0.85rem;
+      margin-right: 0.5rem;
+    }
+    .project-text a:hover { opacity: 0.8; }
+
+    /* Imagem (lado direito) */
+    .project-image {
+      flex: 1 1 300px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    .project-image img {
+      max-width: 100%;
+      border-radius: 8px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.4);
+    }

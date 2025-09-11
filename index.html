@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portfólio Giovane</title>
+  <link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+
+  <!-- Header -->
+  <header>
+    <h2>Meu Portfólio</h2>
+    <nav>
+      <a href="#hero">Início</a>
+      <a href="#about">Sobre Mim</a>
+      <a href="#projects">Projetos</a>
+      <a href="#contact">Contato</a>
+    </nav>
+  </header>
+
+  <!-- Hero -->
+  <section class="hero" id="hero">
+    <h1>Olá, bem-vindo ao meu portfólio</h1>
+  </section>
+
+  <!-- Sobre Mim -->
+  <section class="about" id="about">
+    <img src="1757517052010.jpeg" alt="Minha foto">
+    <p>Me chamo Giovane, sou estudante do 3º período de Análise e Desenvolvimento de Sistemas (UEPB), e busco atuar em um ambiente que incentive aprendizado, colaboração e crescimento profissional, com foco em me tornar desenvolvedor Fullstack.</p>
+    <button onclick="toggleInfo()">Ver mais</button>
+    <div class="extra-info" id="extraInfo">
+      <p><strong>🎓Formação</strong>
+        <br> 
+        <strong> Tecnólogo em Análise e Desenvolvimento de Sistemas - Universidade Estadual da Paraíba (UEPB) </strong>
+        <p>08/2024 – 06/2026 | Cursando – 3º período</p>
+      <br>
+      <p><strong>📝 Interesses:</strong>
+        <br>Desenvolvimento Fullstack, Análise e manutenção de Sistemas</p>
+      <br>
+            <p><strong>Idiomas:</strong></p>
+          Inglês - Intermediário
+          <p>Espanhol - Básico </p>
+      <br>
+      <p><strong>💡 Skills:</strong> 
+        <br><i> Python, HTML, CSS, Git, GitHub, Ruby, SQL </i></p>
+            <br>
+      <p><strong>📜 Certificados:</strong> </p>
+          <strong> IBM SkillsBuild </strong>
+            <p>Introdução à Inteligência Artificial, Machine Learning, Deep Learning, PNL e Visão Computacional (2025) </p>
+          <br>
+          <strong> DIO/NEXA </strong>
+            <p>Análise Avançada de Imagens e Texto com IA na AWS (2024) </p>
+      <br> 
+    </div>
+  </section>
+
+  <!-- Projetos -->
+  <section class="projects-banner" id="projects">
+    <h2>Projetos</h2>
+    <button onclick="window.location.href='projetos.html'">Ver Projetos</button>
+  </section>
+
+  <!-- Contato -->
+  <section class="contact" id="contact">
+    <h2>Contato</h2>
+    <p>Email: geovanegeocdl@gmail.com </p>
+    <a href="Curriculo_Giovane_Costa - Copia.pdf" target="_blank">Ver Currículo</a>
+  </section>
+
+  <script>
+    function toggleInfo() {
+      const extra = document.getElementById("extraInfo");
+      extra.style.display = (extra.style.display === "block") ? "none" : "block";
+    }
+
+    window.addEventListener("scroll", () => {
+      const heroText = document.querySelector(".hero h1");
+      const scrollY = window.scrollY;
+      heroText.style.transform = `translateY(${scrollY * 0.5}px)`;
+      heroText.style.opacity = 1 - scrollY / 300;
+    });
+  </script>
+</body>
+</html>
